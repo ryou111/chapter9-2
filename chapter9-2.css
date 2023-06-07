@@ -12,7 +12,8 @@ header {
 main{
   width :960px;
   margin :50px auto;
-  display:inline-block;
+  display:flex;
+  justify-content:center;
 }
 
 .step-box {
@@ -23,7 +24,7 @@ main{
   background-color : #eee;
 }
 
-.step-box.last-child {
+.step-box:last-child {
   margin-right : 0;
 }
 
@@ -65,20 +66,18 @@ footer {
   background-color : #aaa;
 }
 
-@media screen and (max-width: 425px) {
-  .header {
+@media screen and (max-width: 768px) {
+  main {
     width: 100%;
-    height: 50px;
-  }
-  
-  
-  .step-img {
-    width: 90%;
-    height: 150px;
+    display:block;
   }
   
   .step-box {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-  }
+    width:90%;
+    margin:0 auto 20px;
+    }
+  
+  .step-box:last-child {
+    margin-right:auto;
+  }  
 }
